@@ -1,5 +1,11 @@
 BinaryTreeVisualizer
 ====================
+
+# To run in a browser:
+Open the html `html/binary_tree.html` file in a browser.
+
+# What it is:
+
 **BinaryTreeVisualizer** consists of a Java implementation to create **Binary Search Trees** and some Javascript code to render these trees in a web page. This API is most useful
 for applications which have a Javascript capable web-component, with the Java code in the back-end to construct the binary trees, created by user input for instance.
 I used this API in my final year project (jSCAPE) to provide a visual aid to help students answer exercises on binary search trees.
