@@ -34,13 +34,13 @@ function visualize(binary_tree_json){
 
         /* Set distance between node and its children. */
         levelDistance: 50,
-		levelsToShow: 8,
-		constrained: false,
+		levelsToShow: 4,
+		constrained: true,
 
         /* Enable panning. */
         Navigation: {
-          enable:true,
-          panning:true
+          enable:false,
+          panning:false
         },
 
         /* Set node and edge styles
@@ -50,8 +50,8 @@ function visualize(binary_tree_json){
             height: 20,
             width: 60,
 			dim: 30,
-            type: 'circle',
-            color: '#aaa',
+            type: 'rectangle',
+            color: '#fff',
             overridable: true
         },
         
@@ -86,7 +86,7 @@ function visualize(binary_tree_json){
             //add some color to the nodes in the path between the
             //root node and the selected node.
             if (node.selected) {
-                node.data.$color = "#ff7";
+                node.data.$color = "#fff";
             }
             else {
                 delete node.data.$color;
@@ -97,7 +97,8 @@ function visualize(binary_tree_json){
                     node.eachSubnode(function(n) { count++; });
                     //assign a node color based on
                     //how many children it has
-                    node.data.$color = ['#aaa', '#baa', '#caa', '#daa', '#eaa', '#faa'][count];                    
+                    // node.data.$color = ['#aaa', '#baa', '#caa', '#daa', '#eaa', '#faa'][count];                    
+                    node.data.$color = ['#fff', '#fff', '#fff', '#fff', '#fff', '#fff'][count];                    
                 }
             }
         },
